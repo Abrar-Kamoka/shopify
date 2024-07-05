@@ -1,6 +1,6 @@
 var div = document.createElement('div');
 div.style.padding = '10px 15px 10px 15px';
-div.style.backgroundColor = '#8521ff';
+div.style.backgroundColor = '#21ff85';
 div.classList.add('custom-shipping-checkbox');
 div.style.position = 'relative';
 div.style.width = 'fit-content';
