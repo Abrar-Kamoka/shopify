@@ -1,29 +1,35 @@
-if (window.location.pathname.endsWith('cart/') || window.location.pathname.endsWith('/cart/')) {
-        // Create the custom button
-        var customButton = document.createElement('button');
-        customButton.id = 'customButton';
-        customButton.className = 'btn';
-        customButton.textContent = 'Custom Button';
+if (window.location.pathname.endsWith('/cart') || window.location.pathname.endsWith('/cart/')) {
+        // The cart page has loaded
+        console.log('Cart page loaded');
 
-        // Apply styles to the custom button
-        customButton.style.color = 'white'; // Text color
-        customButton.style.backgroundColor = 'blue'; // Background color
-        customButton.style.border = 'none'; // Remove border
-        customButton.style.padding = '10px 20px'; // Padding
-        customButton.style.fontSize = '16px'; // Font size
-        customButton.style.cursor = 'pointer'; // Pointer cursor on hover
-        customButton.style.borderRadius = '5px'; // Rounded corners
+        // Find the element with class 'title-wrapper-with-link'
+        var titleWrapper = document.querySelector('.title-wrapper-with-link');
 
-        // Insert the button into the cart page
-        var cartForm = document.querySelector('form[action="/cart"]');
-        if (cartForm) {
-            cartForm.appendChild(customButton);
+        if (titleWrapper) {
+            // Add your custom logic here
+            // For example, create a custom button
+            var button = document.createElement('button');
+            button.id = 'new-shipping-button';
+            button.innerText = 'New Shipping';
+            button.classList.add('btn', 'btn-primary');
+
+            // Apply custom CSS styles to ensure it's on top
+            button.style.position = 'relative';
+            button.style.marginTop = '10px'; // Adjust as needed
+            button.style.backgroundColor = '#007bff';
+            button.style.color = 'white';
+            button.style.border = 'none';
+            button.style.padding = '10px 20px';
+            button.style.fontSize = '16px';
+            button.style.cursor = 'pointer';
+            button.style.borderRadius = '5px';
+
+            // Add click event listener to navigate to YouTube
+            button.addEventListener('click', function() {
+                window.location.href = '/apps/myapp';
+            });
+
+            // Insert the button after the 'title-wrapper-with-link' div
+            titleWrapper.insertAdjacentElement('afterend', button);
         }
-
-        // Add event listener to the custom button
-        customButton.addEventListener('click', function() {
-            alert('Custom button clicked!');
-            // Add your custom functionality here
-        });
     }
-});
