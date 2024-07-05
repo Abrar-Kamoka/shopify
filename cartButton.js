@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Ensure we're on the cart page
-    if (window.location.pathname === '/cart') {
+if (window.location.pathname.endsWith('cart/') || window.location.pathname.endsWith('/cart/')) {
         // Create the custom button
         var customButton = document.createElement('button');
         customButton.id = 'customButton';
