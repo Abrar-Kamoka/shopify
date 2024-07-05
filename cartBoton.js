@@ -1,6 +1,6 @@
 var div = document.createElement('div');
 div.style.padding = '10px 15px 10px 15px';
-div.style.backgroundColor = '#21ff85';
+div.style.backgroundColor = '#25e866';
 div.classList.add('custom-shipping-checkbox');
 div.style.position = 'relative';
 div.style.width = 'fit-content';
@@ -15,7 +15,8 @@ checkbox.style.marginRight = '10px';
 var label = document.createElement('label');
 label.htmlFor = 'ship-to-multiple-addresses';
 label.innerText = 'Ship to Multiple Addresses';
-label.style.color = 'white';
+label.style.color = 'black';
+label.style.fontWeight = 'bold';
 //const cart_drawer = document.querySelector('.drawer.animate.active');
 
 const cart_button = document.getElementById("cart-icon-bubble");
